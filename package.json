@@ -1,0 +1,17 @@
+{
+  "name": "malayalam-subtitle-ai",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Web-first Malayalam speech to English subtitle editor",
+  "scripts": {
+    "dev": "pnpm --filter web dev",
+    "build": "pnpm --filter subtitle-core build && pnpm --filter web build",
+    "test": "pnpm --filter subtitle-core test",
+    "lint": "pnpm --filter web lint",
+    "typecheck": "pnpm --filter subtitle-core typecheck && pnpm --filter web typecheck"
+  },
+  "packageManager": "pnpm@12.14.0",
+  "engines": {
+    "node": ">=18.17.0"
+  }
+}

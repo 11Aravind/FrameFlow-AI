@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-color: #0b0c0f;
+  --surface-color: #121318;
+  --surface-subtle: #171821;
+  --border-color: #252836;
+  --accent-color: #00f2fe;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: #f8fafc;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  overflow-x: hidden;
+}
+
+/* CapCut Text Stroke Utilities */
+.text-stroke-black {
+  -webkit-text-stroke: 2px #000;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+.text-stroke-black-lg {
+  -webkit-text-stroke: 3px #000;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+}
+.text-glow-cyan {
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.8), 0 0 20px rgba(0, 242, 254, 0.4);
+}
+.text-glow-yellow {
+  text-shadow: 0 0 10px rgba(250, 204, 21, 0.8), 0 0 20px rgba(250, 204, 21, 0.4);
+}
+
+/* Custom minimal CapCut dark scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0e0f14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #252836;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #393c4f;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid #00f2fe;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
